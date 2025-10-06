@@ -5,24 +5,25 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+
 @Getter
 @Setter
 
 public class HawaiianPizza extends Margherita{
-    private Topping ham;
-    private Topping pineapple;
+    private List<Topping> topping;
 
-    public HawaiianPizza(Topping cheese, String tomato, Topping ham, Topping pineapple, int calories, double price) {
+    public HawaiianPizza(List<Topping> topping, String tomato, int calories, double price) {
         super(cheese, tomato, calories, price);
-        this.ham=ham;
-        this.pineapple=ham;
-    }
+        this.topping = topping;}
 
     @Override
     public String toString() {
         return "HawaiianPizza{" +
-                "ham=" + ham +
-                ", pineapple=" + pineapple +
+                "topping=" + topping +
+                ", tomato='" + tomato + '\'' +
+                ", calories=" + calories +
+                ", price=" + price +
                 ", cheese=" + cheese +
                 ", tomato='" + tomato + '\'' +
                 ", calories=" + calories +

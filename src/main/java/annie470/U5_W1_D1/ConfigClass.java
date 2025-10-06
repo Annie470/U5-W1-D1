@@ -40,7 +40,7 @@ public class ConfigClass {
     public SalamiPizza getSalamiPizza(){return new SalamiPizza(getCheese(),"tomato",getSalami() ,1160, 5.99 );
     };
     @Bean(name = "hawaiian pizza")
-    public HawaiianPizza getHawaiianPizza(){return new HawaiianPizza(getCheese(),"tomato", getHam(), getPineapple(), 1160, 5.99);
+    public HawaiianPizza getHawaiianPizza(){return new HawaiianPizza(List.of(getPineapple(), getHam()),"tomato", 1160, 5.99);
     };
 
     @Bean(name = "menu")
